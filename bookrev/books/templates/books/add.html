@@ -1,0 +1,27 @@
+{% extends 'books/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="add-form">
+   <form action="{% url 'add' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div>{{ form.non_field_errors }}</div>
+      <div >
+         {% for f in form %}
+         <div>
+            <div for="{{ f.id_for_label }}" class="add-label">{{ f.label }}:</div>
+            <div>{{ f }}</div>
+         </div>
+         <div>{{ f.errors }}</div>
+         {% endfor %}
+         {% if request.user.is_authenticated %}
+            <input type="hidden" name="user" value="{{user.id}}">
+         {% endif %}
+      </div>
+      <button type="submit" class="add-submit">Добавить</button>
+   </form>
+</div>
+
+
+{% endblock %}

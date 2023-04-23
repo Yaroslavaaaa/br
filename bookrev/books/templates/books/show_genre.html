@@ -1,0 +1,24 @@
+{% extends 'books/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="books">
+            <div class="cards">
+                {% for b in books %}
+                <div class="card">
+                    <img class="card-img" src="{{b.image.url}}">
+                    <div class="book-info">
+                        <div class="book-name">{{b.title}}</div>
+                        <div>Жанр: {{b.genre}}</div>
+                        <div>Автор: {{b.author}}</div>
+                        <div class="more">
+                            <a class="more-info" href="book/{{ b.slug }}/">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+<div class="list-genres">
+    {% if genre_selected == 0 %}
+    <div class="genre-name selected">Все жанры</div>
+    {% else %}
+    <div class="genre-name"><a href="{% url 'index' %}">Все жанры</a></div>
+    {% endif %}
+
+    {% for g in genres %}
+    {% if g.books__count > 0 %}
+    {% if g.pk == genre_selected %}
+    <div class="genre-name selected">{{g.genre_name}}</div>
+    {% else %}
+    <div class="genre-name"><a href="{{ g.get_absolute_url }}">{{g.genre_name}}</a></div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+
+</div>

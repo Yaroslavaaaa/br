@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Corbel;
+    background: linear-gradient(rgba(183,92,41, 0.4), rgba(183,92,41, 0.63));
+    min-height: 100vh;
+    color: #820000;
+}
+
+
+.navbar{
+    background-color: #B75C29;
+    display: grid;
+    grid-template-columns: 40vw 56vw 20vw;
+
+}
+
+.user-log{
+    font-size: 20px;
+}
+
+
+
+.nav-elements{
+    display: flex;
+    height: 80px;
+    font-size: 20px;
+    color: white;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    height: 45px;
+    width: 45px;
+    background-color: white;
+    color: #B75C29;
+    font-weight: 900;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.logo-text{
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.menu{
+    display: flex;
+    margin-left: 6vw;
+}
+
+.nav-el, .menu{
+    margin-left: 30px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}
+
+.user-log{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /*margin-left: 60vw;*/
+    /*margin-right: 17%;*/
+    color: white;
+}
+
+
+.genre-name{
+    margin-left: 30px;
+    margin-top: 30px;
+    color: #820000;
+    font-size: 20px;
+}
+
+a{
+    color: #820000;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+}
+
+
+.selected{
+    color: black;
+}
+
+
+.genres{
+    display: grid;
+    grid-template-columns: 17% 83%;
+}
+
+.list-genres{
+    width: 200px;
+}
+
+
+.list-pages {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+.list-pages ul {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+.list-pages ul li {
+	display: inline-block;
+	margin: 0 20px 0 0;
+}
+.list-pages a {
+	color: #000;
+	font-size: 24px;
+	text-decoration: none;
+}
+.list-pages .page-num, .page-num-selected {
+	display: inline-block;
+	width: 60px;
+	height: 44px;
+	padding: 16px 0 0 0;
+	border: 1px solid #d0d0d0;
+	border-radius: 30px;
+}
+.list-pages .page-num:hover {
+	box-shadow: 3px 3px 1px #d0d0d0;
+}
+.list-pages .page-num-selected {
+	border: none;
+	color: #000;
+	font-size: 20px;
+}
+.list-pages .page-num-selected:hover {
+	box-shadow: none;
+}
+
+/*.form-input {*/
+/*    width: 300px;*/
+/*    font-size: 16px;*/
+/*}*/
+

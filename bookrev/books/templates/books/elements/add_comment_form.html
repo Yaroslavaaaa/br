@@ -1,0 +1,18 @@
+<form action="{% url 'create_comment' pk=book.pk %}" method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.com_text }}
+    </div>
+    {% if request.user.is_authenticated %}
+    <input type="hidden" name="user" value="{{user.id}}">
+    <input type="hidden" name="book" value="{{book.id}}">
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+    <div class="button-c">
+        <button class="submit-comment" type="submit">Отправить</button>
+    </div>
+    {% else %}
+    <div>Авторизируйтесь, что бы оставить комментарий</div>
+    {% endif %}
+</form>

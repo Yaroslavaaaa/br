@@ -1,0 +1,87 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Corbel;
+    background: linear-gradient(rgba(183,92,41, 0.4), rgba(183,92,41, 0.63));
+    min-height: 51vw;
+    color: #820000;
+}
+
+#header, .module caption{
+    background-color: #B75C29;
+    color: black;
+}
+
+div.breadcrumbs{
+    background-color: rgba(183, 92,  41, 80%);
+}
+
+input[type=submit]{
+    background-color: rgba(183, 92,  41, 80%);
+}
+
+input[type=submit]:hover{
+    background-color: rgba(183, 92,  41, 85%);
+}
+
+input[type=submit].default{
+    background-color: rgba(183, 92,  41, 90%);
+}
+
+input[type=submit].default:hover{
+    background-color: rgba(183, 92,  41, 95%);
+}
+
+
+#branding h1 a:link, #branding h1 a:visited {
+    color: white;
+}
+
+
+h2{
+    rgba(183, 92,  41, 80%);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Corbel;
+    background: linear-gradient(rgba(183,92,41, 0.4), rgba(183,92,41, 0.63));
+    min-height: 51vw;
+    color: #820000;
+}
+
+#header, .module caption{
+    background-color: #B75C29;
+    color: black;
+}
+
+div.breadcrumbs{
+    background-color: rgba(183, 92,  41, 80%);
+}
+
+input[type=submit]{
+    background-color: rgba(183, 92,  41, 80%);
+}
+
+input[type=submit]:hover{
+    background-color: rgba(183, 92,  41, 85%);
+}
+
+input[type=submit].default{
+    background-color: rgba(183, 92,  41, 90%);
+}
+
+input[type=submit].default:hover{
+    background-color: rgba(183, 92,  41, 95%);
+}
+
+
+#branding h1 a:link, #branding h1 a:visited {
+    color: white;
+}
+
+
+h2{
+    rgba(183, 92,  41, 80%);
+}

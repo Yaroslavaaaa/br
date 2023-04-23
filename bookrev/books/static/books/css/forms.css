@@ -1,0 +1,117 @@
+.add-form, .edit-profile-form, .login-form, .register-form{
+    margin-top: 2vh;
+    font-size: 20px;
+    min-width: 500px;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 25vw;
+}
+
+
+input.form-input, textarea.add-description, #id_capatcha_1 {
+    background-color: rgba(183,92,41, 0.5);
+    width:95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.add-input, .form-input{
+    background-color: rgba(183,92,41, 0.5);
+    height: 4vh;
+    width: 20vw;
+    border: solid 1px #B75C29;
+    border-radius: 1vh;
+    margin-bottom: 2vh;
+}
+
+
+.add-input::placeholder{
+    color: rgba(130, 0, 0, 0.5);
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.add-description{
+    /*width: 30vw;*/
+    /*height: 10vw;*/
+    border-radius: 1vh;
+    background-color: rgba(183, 92,  41, 0.5);
+    border: solid 2px #B75C29;
+}
+
+.add-description::placeholder{
+    color: rgba(130, 0, 0, 0.5);
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.add-submit, .save-profile, .login-submit, .register-submit{
+    background-color: rgba(183, 92,  41, 0.7);
+    width: 12vw;
+    height: 5vh;
+    border: solid 2px #B75C29;
+    margin-top: 3vh;
+    color: #820000;
+    border-radius: 1vh;
+    margin-left: 15vw;
+}
+
+
+input[type="file"] {
+    width: 97%;
+    height: auto;
+    font-size: 16px;
+    color: #333;
+    padding: 5px;
+    background-color: rgba(183,92,41, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="file"]:hover {
+    background-color: rgba(183,92,41, 0.6);
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px #66afe9;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #B75C29;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="file"]::-ms-browse {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: no-repeat right center;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+

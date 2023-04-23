@@ -1,0 +1,87 @@
+{% extends 'books/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div>
+    <div>
+        <h1>{{book.title}}</h1>
+    </div>
+    <div class="book-content">
+        <div>
+            <img class="book_image" src="{{book.image.url}}">
+        </div>
+        <div class="book-description">
+            <div>
+                <span class="bold-text">Автор:</span> {{book.author}}
+            </div>
+            <div>
+                <span class="bold-text">Жанр:</span> {{book.genre}}
+            </div>
+            <div>
+                <span class="bold-text">Год выпуска:</span> {{book.pub_date}}
+            </div>
+            <div>
+                {{book.description|linebreaks}}
+            </div>
+        </div>
+    </div>
+    <div class="com">
+
+        <div class="comment">Комментарии</div>
+        <div class="comments">
+
+            {% include 'books/elements/add_comment_form.html' %}
+
+        </div>
+    </div>
+
+    {% for c in comments %}
+    <div class="one-comment">
+        <div>
+            <img class="avatar-com" src="{{ c.user.avatar.url }}">
+        </div>
+        <div class="user-and-text">
+            <div class="user-comment">
+                <div>{{c.user}}</div>
+            </div>
+            <div class="text-comment">
+                <div>{{c}}</div>
+            </div>
+            <button data-id="{{ c.id }}" class="reply-btn">Ответить</button>
+            {% include 'books/elements/ans_comment_form.html' %}
+        </div>
+
+    </div>
+
+
+    <div>
+        {% if c.comments_ans.all %}
+        {% for child in c.comments_ans.all %}
+        <div class="ans-com">
+            <div>
+                <img class="avatar-com ans-com-avatar" src="{{ child.user_com_ans.avatar.url }}">
+            </div>
+            <div class="user-and-text">
+                <div class="user-comment">
+                    <div>{{child.user_com_ans.username}}</div>
+                </div>
+                <div class="text-comment">
+                    <div>{{ child.ans_com_text }}</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+    </div>
+    {% endfor %}
+
+
+</div>
+
+
+
+
+
+{% endblock %}

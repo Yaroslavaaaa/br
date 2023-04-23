@@ -1,0 +1,131 @@
+.book_image{
+    width: 220px;
+    border-radius: 5%;
+    box-shadow: 10px 10px 40px rgba(255, 255, 255, 50%);
+}
+
+.book-content{
+    display: flex;
+}
+
+.book-description{
+    margin-left: 50px;
+    margin-right: 17%;
+    font-size: 20px;
+}
+
+
+.bold-text{
+    font-weight: bold;
+}
+
+.comments{
+    width: 83%;
+    background-color: rgba(183, 92,  41, 27%);
+    border-radius: 0 0 2vh 2vh;
+    margin-bottom: 3vh;
+}
+
+
+.comment{
+    width: 83%;
+    background-color: rgba(183, 92,  41, 27%);
+    border-radius: 2vh 2vh 0 0;
+    color: #820000;
+    font-size: 40px;
+    text-align: center;
+    border-bottom: solid 1px #000000;
+}
+
+
+.input-comment{
+
+    width: 90%;
+    height: 200px;
+    margin-left: 5%;
+    margin-top: 20px;
+    border-radius: 2vh;
+    background-color: rgba(183, 92,  41, 20%);
+    border: solid 2px #B75C29;
+    margin-bottom: 1vh;
+    padding: 10px;
+
+}
+
+
+.input-ans-comment{
+    width: 51vw;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 2vh;
+    background-color: rgba(183, 92,  41, 20%);
+    border: solid 2px #B75C29;
+    margin-bottom: 1vh;
+    padding: 10px;
+}
+
+.input-comment::placeholder, .input-ans-comment::placeholder{
+    color: rgba(130, 0, 0, 80%);
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+
+.button-c{
+    display: flex;
+    justify-content: end;
+    margin-right: 4%;
+    margin-top: 10px;
+}
+
+
+.submit-comment{
+    width: 120px;
+    height: 30px;
+    background-color: rgba(183, 92,  41, 30%);
+    border: none;
+    border-radius: 1vh;
+    color: #820000;
+    margin-bottom: 2vh;
+
+}
+
+
+.avatar-com{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 100%;
+}
+
+
+.one-comment, .ans-com{
+    display: flex;
+    background-color: rgba(183, 92,  41, 0.3);
+    margin-bottom: 5vh;
+    padding: 2vh;
+    width: 66vw;
+    border-radius: 2vh;
+}
+
+.ans-com{
+    margin-left: 6vw;
+    width: 60vw;
+}
+
+.user-and-text{
+    margin-left: 1vw;
+}
+
+
+
+
+.reply-btn{
+    border: none;
+    background-color: rgba(183, 92,  41, 0);
+    cursor: pointer;
+    margin-left: 52vw;
+    color: #820000;
+}
+
+
+

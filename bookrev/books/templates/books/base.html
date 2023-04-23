@@ -1,0 +1,121 @@
+{% load static %}
+{% load books_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link type="text/css" href="{% static 'books/css/style.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'books/css/book.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'books/css/index.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'books/css/forms.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'books/css/profile.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'books/css/style.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'books/css/book.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'books/css/index.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'books/css/forms.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'books/css/profile.css' %}" rel="stylesheet"/>
+</head>
+<body>
+<div class="navbar">
+    <div class="nav-elements">
+        <div class="nav-el logo">BR</div>
+        <div class="logo-text">Bookrev</div>
+
+        <div class="menu">
+            {% for m in menu %}
+            <div><a class="nav-link" href="{% url m.url_name %}">{{m.title}}</a></div>
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+    {% if request.user.is_authenticated %}
+    <div class="user-log">
+        <div class="login-logout">
+            <a class="nav-link" href="{% url 'profile' user_username=user.username %}">{{user.username}}</a>
+        </div>
+        <div class="login-logout">
+            <a class="nav-link" href="{% url 'logout_user_page' %}">Выйти</a>
+        </div>
+    </div>
+    {% else %}
+    <div class="user-log">
+        <div class="login-logout">
+            <a class="nav-link" href="{% url 'register' %}">Регистрация</a>
+        </div>
+        <div class="login-logout">
+            <a class="nav-link" href="{% url 'login_user_page' %}">Войти</a>
+        </div>
+    </div>
+    {% endif %}
+
+
+</div>
+
+
+{% load cache %}
+<div class="genres">
+
+    {% if 'book' in request.path or 'genre' in request.path or request.path == '/' %}
+    <div class="list-genres">
+        {% if genre_selected == 0 %}
+        <div class="genre-name selected">Все жанры</div>
+        {% else %}
+        <div class="genre-name"><a href="{% url 'index' %}">Все жанры</a></div>
+        {% endif %}
+
+        {% for g in genres %}
+        {% if g.books__count > 0 %}
+        {% if g.pk == genre_selected %}
+        <div class="genre-name selected">{{g.genre_name}}</div>
+        {% else %}
+        <div class="genre-name"><a href="{{ g.get_absolute_url }}">{{g.genre_name}}</a></div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+    </div>
+
+
+    <div>
+        {% block content %}
+
+        {% endblock %}
+
+        {% if page_obj.has_other_pages %}
+        <nav class="list-pages">
+            <ul>
+
+                {% if page_obj.has_previous %}
+                <li class="page-num">
+                    <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>
+                </li>
+                {% endif %}
+
+                {% for p in paginator.page_range %}
+                {% if page_obj.number == p %}
+                <li class="page-num page-num-selected">{{p}}</li>
+                {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
+                <li class="page-num">
+                    <a href="?page={{p}}">{{p}}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                <li class="page-num">
+                    <a href="?page={{ page_obj.next_page_number }}">&gt;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+</div>
+
+<script src="{% static 'books/js/script.js' %}"></script>
+</body>
+</html>

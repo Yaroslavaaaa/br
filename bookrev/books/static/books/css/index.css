@@ -1,0 +1,121 @@
+.search{
+    display: flex;
+    justify-content: center;
+}
+
+.search-input{
+    height: 30px;
+    width: 250px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    background-color: rgba(183,92,41, 0.3);
+    padding: 5px;
+}
+
+.search-input:focus{
+    outline: none;
+}
+
+.search-input::placeholder{
+    color: rgba(183,92,41, 0.6);
+}
+
+.search-button{
+    height: 40px;
+    width: 70px;
+    color: white;
+    background-color: rgba(183,92,41, 0.7);
+    border: none;
+    border-radius: 0 10px 10px 0;
+    margin-left: -4px;
+}
+
+.content{
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+.cards{
+    margin-top: 20px;
+}
+
+
+.card-img{
+    border-radius: 10px;
+}
+
+
+.book-card {
+  border: 2px solid #B75C29;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover {
+  width: 25%;
+  height: 35%;
+  position: relative;
+  overflow: hidden;
+  margin: 1vw;
+}
+
+.book-cover img {
+  width: 100%;
+  /*height: 100%;*/
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.book-cover::before {
+  position: absolute;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.book-details {
+  width: 75%;
+  padding: 30px;
+  position: relative;
+}
+
+.book-title {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #B75C29;
+}
+
+.book-author {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.book-summary {
+  margin-bottom: 10px;
+}
+
+.book-read-more {
+  display: inline-block;
+  background-color: rgba(183,92,41, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.book-read-more:hover {
+  background-color: rgba(183,92,41, 1);
+}
+
+

@@ -1,0 +1,34 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+
+<div class="content">
+    <div class="search">
+        <form action="{% url 'search_results' %}" method="get">
+            <input type="text" name="q" class="search-input" placeholder="Название книги">
+            <button type="submit" class="search-button">
+                ПОИСК
+            </button>
+        </form>
+    </div>
+    <div class="books">
+        <div class="cards">
+            {% for b in books %}
+            <div class="book-card">
+                <div class="book-cover">
+                    <img class="card-img" src="{{b.image.url}}">
+                </div>
+                <div class="book-details">
+                    <h2 class="book-title">{{b.title}}</h2>
+                    <p class="book-author">{{b.author}}</p>
+                    <p class="book-author">{{b.genre}}</p>
+                    <p class="book-summary">{{b.description|linebreaks|truncatewords:19}}</p>
+                    <a href="{% url 'show_book' book_slug=b.slug %}" class="book-read-more">Подробнее</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

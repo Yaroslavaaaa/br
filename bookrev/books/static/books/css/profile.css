@@ -1,0 +1,37 @@
+.profile {
+    margin-left: 17vw;
+    margin-top: 2vw;
+}
+
+.avatar_image {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 5%;
+}
+
+.user-profile {
+    display: flex;
+    width: 50vw;
+}
+
+.user-info {
+    margin: 0;
+    margin-left: 2vw;
+}
+
+.firstname-lastname {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nickname, .user-age{
+    font-size: 20px;
+}
+
+.edit-profile{
+    margin-top: 6vw;
+}
+
+
+
+
